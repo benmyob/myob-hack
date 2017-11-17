@@ -1,0 +1,37 @@
+﻿@model MusicStore.Web.UI.ViewModels.RegistrationViewModel
+
+<h1>Register to be greeted with your song</h1>
+<form method="post" action="@Url.Action("Register")">
+    <div class="form-group">
+        <label asp-for="Name" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input id="txtName" type="text" asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="MacAddress" class="col-md-2 control-label">Device MAC Address</label>
+        <div class="col-md-10">
+            <input id="txtMacAddress" type="text" asp-for="MacAddress" class="form-control" />
+            <span asp-validation-for="MacAddress" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="ArtistName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input id="txtArtist" asp-for="ArtistName" type="text" class="form-control"/>
+            <span asp-validation-for="ArtistName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="FavouriteSong" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input id="txtSong" type="text" asp-for="FavouriteSong" class="form-control" />
+            <span asp-validation-for="FavouriteSong" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <button class="btn" type="submit">Register</button>    
+    </div>
+</form>
